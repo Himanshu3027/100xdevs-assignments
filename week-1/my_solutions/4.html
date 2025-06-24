@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complex Grid</title>
+        <style>
+            #container {
+                margin: 0 auto;
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 1fr 2fr;
+                width: 1200px;
+            }
+            #left {
+                background-color: red;
+                display: flex;
+                flex-direction: column;
+            }
+            #right {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="left">
+                <h1 id="left-text">Left</h1>
+                <p id="para">Esse consectetur veniam anim Lorem. Consequat elit eu in exercitation nostrud veniam eiusmod nulla. Cillum minim ad dolore veniam officia qui deserunt consequat aute culpa consectetur consequat consequat consequat. Occaecat ea irure in sint in nisi. Consequat fugiat reprehenderit in eiusmod elit laboris Lorem velit aliquip minim ad mollit anim cillum.</p>
+            </div>
+            <div id="right">
+                <div>Col1</div>
+                <div>Col1</div>
+                <div>Col1</div>
+                <div>Col2</div>
+                <div>Col2</div>
+                <div>Col2</div>
+                <div>Col3</div>
+                <div>Col3</div>
+                <div>Col3</div>
+            </div>
+        </div>
+    </body>
+</html>
