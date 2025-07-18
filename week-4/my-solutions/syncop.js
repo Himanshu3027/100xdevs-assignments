@@ -40,32 +40,32 @@
 //     function(error) {myDisplayer(error);}    
 // )
 
-async function readFiles() {
-  try {
-    console.log('Starting file read');
-    const data1 = await fs.readFile('b.txt', 'utf8');
-    const data2 = await fs.readFile('a.txt', 'utf8');
-    console.log('File read');
-    console.log(data1, data2);
-  }
-  catch(error) {
-    console.error('Error reading files', error);
-  }
-}
-readFiles();
+// async function readFiles() {
+//   try {
+//     console.log('Starting file read');
+//     const data1 = await fs.readFile('b.txt', 'utf8');
+//     const data2 = await fs.readFile('a.txt', 'utf8');
+//     console.log('File read');
+//     console.log(data1, data2);
+//   }
+//   catch(error) {
+//     console.error('Error reading files', error);
+//   }
+// }
+// readFiles();
 
 
-const fs = require('fs').promises;
-const promise1 = Promise.resolve('First result');
-console.log('after promise 1')
-const promise3 = fs.readFile('a.txt', 'utf8');
-console.log('after promise 2')
-const promise2 = new Promise((resolve) => {setTimeout(() => {resolve('Second result')},1000)});
-console.log('after promise 3')
+// const fs = require('fs').promises;
+// const promise1 = Promise.resolve('First result');
+// console.log('after promise 1')
+// const promise3 = fs.readFile('a.txt', 'utf8');
+// console.log('after promise 2')
+// const promise2 = new Promise((resolve) => {setTimeout(() => {resolve('Second result')},1000)});
+// console.log('after promise 3')
 
-Promise.all([promise1, promise2, promise3])
-  .then(result => {console.log('Results: ', result);})
-  .catch(error => {console.error('Error in one of the promises: ', error);})
+// Promise.all([promise1, promise2, promise3])
+//   .then(result => {console.log('Results: ', result);})
+//   .catch(error => {console.error('Error in one of the promises: ', error);})
 
 function getUser(userID) {
   return new Promise((resolve, reject) => {
@@ -93,5 +93,5 @@ getUser(123)
     console.log('Posts:', post)
   })
   .catch(err => {
-    console.log('Error: ', error);
+    console.log('Error: ', err);
   });
