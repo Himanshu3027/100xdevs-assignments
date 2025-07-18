@@ -40,19 +40,19 @@
 //     function(error) {myDisplayer(error);}    
 // )
 
-// async function readFiles() {
-//   try {
-//     console.log('Starting file read');
-//     const data1 = await fs.readFile('b.txt', 'utf8');
-//     const data2 = await fs.readFile('a.txt', 'utf8');
-//     console.log('File read');
-//     console.log(data1, data2);
-//   }
-//   catch(error) {
-//     console.error('Error reading files', error);
-//   }
-// }
-// readFiles();
+async function readFiles() {
+  try {
+    console.log('Starting file read');
+    const data1 = await fs.readFile('b.txt', 'utf8');
+    const data2 = await fs.readFile('a.txt', 'utf8');
+    console.log('File read');
+    console.log(data1, data2);
+  }
+  catch(error) {
+    console.error('Error reading files', error);
+  }
+}
+readFiles();
 
 
 const fs = require('fs').promises;
