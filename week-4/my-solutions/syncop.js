@@ -95,3 +95,21 @@ getUser(123)
   .catch(err => {
     console.log('Error: ', err);
   });
+
+
+const fs = require('fs').promises;
+
+async function read() {
+  try {
+    const data = await fs.readFile('a.txt', 'utf8');
+    console.log(data);
+  }
+  catch(err) {
+    console.error('Error: ', err);
+  }
+}
+
+read();
+
+
+  
