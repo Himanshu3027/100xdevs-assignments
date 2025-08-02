@@ -141,15 +141,3 @@ console.timeEnd('parallel');
 return results;
 }
 
-// Demo
-async function runDemo() {
-console.log('Running sequentially...');
-const seqResults = await fetchSequential();
-console.log(seqResults);
-
-console.log('\nRunning in parallel...');
-const parResults = await fetchParallel();
-console.log(parResults);
-}
-
-runDemo();
